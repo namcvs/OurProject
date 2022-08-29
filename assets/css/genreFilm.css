@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+}
+
+body {
+    background-color: #000000;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbetween {
+    justify-content: space-between;
+}
+
+.flexcontentcenter {
+    justify-content: center;
+}
+
+.flexspacearound {
+    justify-content: space-around;
+}
+
+.flexstart {
+    justify-content: flex-start;
+}
+
+.flexend {
+    justify-content: flex-end;
+}
+
+.flexcenter {
+    align-items: center;
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+.container {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-color: #1a1a1a; */
+}
+
+
+
+/* ===============banner=========================== */
+.banner {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    /* filter: blur(2px); */
+}
+
+.banner:after {
+    content: "";
+    top: 70%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* background-color: rgba(26, 12, 12, 0.526); */
+    background: linear-gradient(0deg, black, transparent);
+    position: absolute;
+
+}
+
+.banner>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+}
+
+/* ===============title=========================== */
+.title {
+    width: 100%;
+    background: linear-gradient(84deg, #ff8e0b, rgba(0, 0, 255, 0));
+    border-bottom: 1px solid white;
+    margin-top: 60px;
+}
+
+.title h1 {
+    line-height: 50px;
+    color: white;
+    margin-left: 40px;
+    letter-spacing: 2px;
+
+}
+
+/* ===============filmss=========================== */
+.film_name,
+.film_style>ul>li,
+.film_view {
+    color: white;
+    text-align: center;
+    margin-top: 9px;
+
+}
+
+
+.film:hover>.film_img {
+    height: 68%;
+    transition: 0.5s;
+
+
+}
+
+.film_style>ul>li:first-child {
+    list-style-type: disc;
+    color: rgb(43, 250, 43);
+}
+
+.film_style>ul>li:last-child {
+    color: rgb(255, 172, 28);
+    list-style-type: disc;
+
+}
+
+.films {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.film {
+    width: 300px;
+    overflow: hidden;
+    height: 300px;
+    background-color: #253033;
+    border-radius: 10px;
+    margin: 16px;
+}
+
+.film_img {
+    width: 100%;
+    height: 89%;
+    overflow: hidden;
+}
+
+.film_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.film_name {}
+
+
+
+
+/* ================responsive==================== */
+/* .Tablet:width>740 width<1024 */
+@media only screen and (min-width:740px) and (max-width:1024px) {}
+
+/* .Mobile:width<742px */
+@media only screen and (max-width:740px) {}

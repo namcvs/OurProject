@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbetween {
+    justify-content: space-between;
+}
+
+.flexcontentcenter {
+    justify-content: center;
+}
+
+.flexspacearound {
+    justify-content: space-around;
+}
+
+.flexstart {
+    justify-content: flex-start;
+}
+
+.flexend {
+    justify-content: flex-end;
+}
+
+.flexcenter {
+    align-items: center;
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+
+
+
+/* ========================banner====================== */
+.banner {
+    background: url('../../imgs/play-page/film_1/bannerjumanji.jpg');
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner:after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(26, 12, 12, 0.674);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    /* z-index: 1; */
+}
+
+/* play-movie */
+
+.container-inf4movies {
+    width: 1200px;
+    max-width: calc(100%-32px);
+    margin: 0 auto;
+    display: block;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    position: relative;
+
+}
+
+.details-poster {
+    overflow: hidden;
+    width: 400px;
+    height: 450px !important;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.details-poster-img {
+    /* border-radius: 10px; */
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    margin-right: 0;
+
+}
+
+.details-info {
+    width: 63%;
+    max-width: 100%;
+    color: #fff;
+
+
+}
+
+.details-info-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #f8a31b;
+}
+
+.details-info-overview {
+    line-height: 1.6;
+    max-width: 600px;
+
+}
+
+.release_date {
+    margin-top: 20px;
+}
+
+.genres {
+    display: flex;
+    margin: 20px 0;
+
+}
+
+.btn {
+    padding: 5px 10px;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #ffb43a;
+}
+
+.btn1 {
+
+    padding: 5px 10px;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #ffb43a;
+    margin-left: 30px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.star-count {
+    margin-left: 15px;
+}
+
+/* ================watch trailer================= */
+.trailer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    z-index: 10000;
+    background: linear-gradient(0deg, black, rgba(0, 0, 0, 0.538));
+    /* backdrop-filter: blur(20px); */
+    visibility: hidden;
+    display: none;
+
+}
+
+.active {
+    visibility: visible;
+    display: flex !important;
+
+}
+
+@keyframes trailermove {
+    from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.trailer>.video {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    animation: trailermove ease 0.5s;
+}
+
+.trailer .close {
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* =============================================== */
+.watch {
+    display: flex;
+    margin: 20px 0;
+}
+
+.watch-link {
+    padding: 10px;
+    color: lavender;
+    /* background-image: linear-gradient(150deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background-image: linear-gradient(150deg, #FF2525 7%, #a59635 80%);
+    border-radius: 8px;
+    margin-right: 25px;
+    cursor: pointer;
+
+}
+
+.watch-link:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/* ========================================================== */
+
+.homepage {
+    color: #fff;
+    font-size: 16px;
+
+}
+
+.homepage-link {
+    color: #c24b3e;
+}
+
+.cast-title {
+    color: #ffb43a;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 40px;
+
+}
+
+.cast-layout {
+    /* grid-gap sử dụng thuộc tính khoảng cách lưới để chỉ định kích thước của khoảng cách giữa các hàng và giữa các cột. */
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+}
+
+
+.cast-item img {
+    border-radius: 10px;
+
+}
+
+img {
+    width: 104%;
+    height: 103%;
+    object-fit: cover;
+}
+
+.cast-name {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cast-character {
+    color: #f1c40f;
+    font-size: 13px;
+}
+
+
+
+
+
+/* ================responsive==================== */
+/* .Tablet:width>740 width<1024 */
+@media only screen and (min-width:740px) and (max-width:1024px) {
+
+
+
+    /* =======video trailer======== */
+
+    /* banner */
+
+    .banner_info {
+        width: 100%;
+    }
+
+    .banner {
+
+        padding: 46px 0 90px 36px;
+    }
+
+    .banner_img_png .img2 {
+        width: 168px;
+    }
+
+    .banner_title {
+        font-size: 6px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+        width: 30%;
+        color: white;
+    }
+
+    .banner_btn .button {
+        padding: 8px 16px;
+        margin: 0;
+        font-size: 6px;
+    }
+
+    .banner_trailer>a {
+        right: 60px;
+        font-size: 20px;
+    }
+
+
+}
+
+/* .Mobile:width<742px */
+@media only screen and (max-width:740px) {
+
+
+    /* banner */
+
+    .banner_info {
+        width: 100%;
+    }
+
+    .banner {
+
+        padding: 46px 0 90px 36px;
+    }
+
+    .banner_img_png .img2 {
+        width: 70px;
+    }
+
+    .banner_title {
+        font-size: 6px;
+        font-weight: 600;
+        text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+        width: 49%;
+        color: white;
+    }
+
+    .banner_btn .button {
+        padding: 8px 16px;
+        margin: 0;
+        font-size: 6px;
+    }
+
+    .banner_trailer>a {
+        left: 30px;
+        right: 240px;
+        font-size: 16px;
+    }
+
+    /*============== navcontent ================*/
+    .navcontent {
+        padding: 0;
+        background: linear-gradient(0deg, black, transparent);
+        border: 1px solid white;
+    }
+
+    .navcontent_sub {
+        flex-direction: column;
+    }
+
+    .navcontent_sub li a {
+        display: block;
+        padding: 10px 46px;
+        text-align: center;
+        border: none;
+    }
+
+    .navcontent_sub li a:hover {
+        background-color: rgb(255, 179, 3);
+        /* color: rgb(78, 78, 249); */
+        color: #000000;
+
+    }
+
+    /* titles phim */
+    .adventure_films {
+        font-size: 10px;
+    }
+
+
+
+}
